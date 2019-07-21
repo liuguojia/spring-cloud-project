@@ -1,0 +1,10 @@
+
+# System
+.DS_Store
+
+# Idea
+.idea/
+spring-cloud-project.iml
+
+# Spring
+
