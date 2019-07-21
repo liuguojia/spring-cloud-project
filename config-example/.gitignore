@@ -1,0 +1,12 @@
+
+# System
+.DS_Store
+
+# Idea
+**/.idea/
+
+# Spring
+**/target/
+
+# Web
+**/node_modules
