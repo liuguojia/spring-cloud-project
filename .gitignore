@@ -3,8 +3,10 @@
 .DS_Store
 
 # Idea
-.idea/
-spring-cloud-project.iml
+**/.idea/
 
 # Spring
+**/target/
 
+# Web
+**/node_modules

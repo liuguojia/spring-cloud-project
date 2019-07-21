@@ -1,0 +1,16 @@
+server:
+  port: 8888
+
+logging:
+  level:
+    ren.steve: debug
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/learnDB?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: Liuguojia@0525
+
+mybatis:
+  type-aliases-package: ren.steve.pojo
