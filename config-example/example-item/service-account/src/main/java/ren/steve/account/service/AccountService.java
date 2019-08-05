@@ -11,8 +11,6 @@ import ren.steve.common.vo.ResultVo;
 import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
 /**
  * @Author : 刘国家
@@ -41,14 +39,14 @@ public class AccountService {
 
     Example example = new Example(Account.class);
 
-    if ( accountQuery.getFuzzy() != null ) {
-      example.createCriteria().orLike("id", "%" + accountQuery.getFuzzy() + "%")
-          .orLike("name", "%" + accountQuery.getFuzzy() + "%")
-          .orLike("phone", "%" + accountQuery.getFuzzy() + "%");
+    if ( accountQuery.getFuzzySearch() != null ) {
+      example.createCriteria().orLike("id", "%" + accountQuery.getFuzzySearch() + "%")
+          .orLike("name", "%" + accountQuery.getFuzzySearch() + "%")
+          .orLike("phone", "%" + accountQuery.getFuzzySearch() + "%");
     }
 
     if ( accountQuery.getUid() != null ) {
-      example.createCriteria().orEqualTo("uid", accountQuery.getFuzzy());
+      example.createCriteria().orEqualTo("uid", accountQuery.getFuzzySearch());
     }
 
     if ( accountQuery.getStatus() != null ) {

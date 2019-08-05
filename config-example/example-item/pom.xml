@@ -15,6 +15,10 @@
   <modules>
     <module>interface-account</module>
     <module>service-account</module>
+    <module>interface-web-components</module>
+    <module>service-web-components</module>
+    <module>interface-authority</module>
+    <module>service-authority</module>
   </modules>
 
 

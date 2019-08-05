@@ -10,7 +10,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://39.105.179.170:3306/learnDB?useUnicode=true&characterEncoding=UTF-8&useSSL=false
     username: root
-    password: Liuguojia@0525
+    password: liuguojia@0525
 
 mybatis:
   type-aliases-package: ren.steve.pojo

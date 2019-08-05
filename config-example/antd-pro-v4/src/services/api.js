@@ -1,4 +1,3 @@
-
 import { stringify } from 'qs';
 import request from '@/utils/request';
 
@@ -13,27 +12,23 @@ import request from '@/utils/request';
  * @Function fetchRemoteMenuData
  */
 
-export async function login ( params ) {
-  return request('http://127.0.0.1:5555/api/router-service/account/login', {
+export async function login(params) {
+  return request('/api/router-service/account/login', {
     method: 'POST',
     data: params,
   });
 }
 
-
-export async function  queryRemoteMenuData ( params ) {
-  return request('http://127.0.0.1:5555/api/router-service/router/list', {
+export async function queryRemoteMenuData(params) {
+  return request('/api/router-service/router/list', {
     method: 'POST',
     data: params,
   });
 }
 
-export async function  queryPageConfig ( params ) {
-  return request('http://127.0.0.1:5555/api/router-service/page/component', {
+export async function queryPageConfig(params) {
+  return request('/api/router-service/page/component', {
     method: 'POST',
     data: params,
   });
 }
-
-
-

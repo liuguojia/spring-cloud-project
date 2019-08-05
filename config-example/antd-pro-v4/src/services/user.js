@@ -1,7 +1,4 @@
-
-
 import request from '@/utils/request';
-
 
 /**
  * @Author : 刘国家
@@ -11,24 +8,22 @@ import request from '@/utils/request';
  * @param null
  */
 
-
-
-export async function queryAccountList( params ) {
-  return request('http://127.0.0.1:5555/api/router-service/account/list', {
+export async function queryAccountList(params) {
+  return request('/api/router-service/account/list', {
     method: 'POST',
     data: params,
   });
 }
 
-export async function queryCurrentAccount( params ) {
+export async function queryCurrentAccount(params) {
   return request('/api/router-service/account/current', {
     method: 'POST',
     data: params,
   });
 }
 
-export async function queryAuthorityByCurrentAccount( params ) {
-  return request('http://127.0.0.1:5555/api/router-service/authority/currentAuthority', {
+export async function queryAuthorityByCurrentAccount(params) {
+  return request('/api/router-service/authority/currentAuthority', {
     method: 'POST',
     data: params,
   });

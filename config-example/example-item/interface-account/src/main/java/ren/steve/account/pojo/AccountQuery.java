@@ -24,7 +24,7 @@ public class AccountQuery{
   private String phone;
   private Integer authority;
   private Integer status;
-  private String fuzzy;
+  private String fuzzySearch;
 
 
 }
