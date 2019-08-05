@@ -2,8 +2,9 @@
 # System
 .DS_Store
 
-# Idea
+# IDEA
 **/.idea/
+*.iml
 
 # Spring
 **/target/
