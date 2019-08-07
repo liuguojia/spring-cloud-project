@@ -3,7 +3,6 @@ package ren.steve.common.advide;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import ren.steve.common.enums.AccountExceptionEnum;
 import ren.steve.common.enums.RouterExceptionEnum;
 import ren.steve.common.exception.ExampleException;
 import ren.steve.common.vo.ExceptionResult;

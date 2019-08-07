@@ -1,11 +1,7 @@
 package ren.steve.common.exception;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
-import ren.steve.common.enums.AccountExceptionEnum;
-import ren.steve.common.enums.CommonExceptionEnum;
-import ren.steve.common.enums.RouterExceptionEnum;
+import ren.steve.common.enums.*;
 
 /**
  * @Author : 刘国家
@@ -19,6 +15,8 @@ public class ExampleException extends RuntimeException{
   private CommonExceptionEnum commonExceptionEnum;
   private AccountExceptionEnum accountExceptionEnum;
   private RouterExceptionEnum routerExceptionEnum;
+  private AuthorityExceptionEnum authorityExceptionEnum;
+  private WebComponentExceptionEnum webComponentExceptionEnum;
 
   public ExampleException ( CommonExceptionEnum commonExceptionEnum  ) {
     this.commonExceptionEnum = commonExceptionEnum;
@@ -29,7 +27,11 @@ public class ExampleException extends RuntimeException{
   public ExampleException ( RouterExceptionEnum routerExceptionEnum  ) {
     this.routerExceptionEnum = routerExceptionEnum;
   }
-
-
+  public ExampleException ( AuthorityExceptionEnum authorityExceptionEnum  ) {
+    this.authorityExceptionEnum = authorityExceptionEnum;
+  }
+  public ExampleException ( WebComponentExceptionEnum webComponentExceptionEnum  ) {
+    this.webComponentExceptionEnum = webComponentExceptionEnum;
+  }
 
 }

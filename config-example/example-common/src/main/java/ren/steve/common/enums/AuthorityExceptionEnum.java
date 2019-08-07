@@ -6,17 +6,20 @@ import lombok.NoArgsConstructor;
 
 /**
  * @Author : 刘国家
- * @Date : 2019-08-07 12:14
- * @Description :
+ * @Date : 2019-07-21 15:16
+ * @Description : Account 异常字典
  * @ModifiedBy :
  */
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public enum  RouterExceptionEnum {
+public enum AuthorityExceptionEnum {
 
-  ROUTER_NOT_FOUND(404, "路由访问错误"),
-  ROUTER_ID_NOT_FOUND(404, "路由ID不能为空"),
+  AUTHORITY_NOT_FOUND(404, "权限没有找到"),
+  AUTHORITY_ID_NOT_FOUND(404, "权限ID不能为空"),
+
+
+
 
 
   ;

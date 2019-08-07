@@ -6,17 +6,20 @@ import lombok.NoArgsConstructor;
 
 /**
  * @Author : 刘国家
- * @Date : 2019-08-07 12:14
- * @Description :
+ * @Date : 2019-07-21 15:16
+ * @Description : Account 异常字典
  * @ModifiedBy :
  */
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public enum  RouterExceptionEnum {
+public enum WebComponentExceptionEnum {
 
-  ROUTER_NOT_FOUND(404, "路由访问错误"),
-  ROUTER_ID_NOT_FOUND(404, "路由ID不能为空"),
+  WEB_COMPONENT_NOT_FOUND(404, "Web组件没有找到"),
+  WEB_COMPONENT_ID_NOT_FOUND(404, "Web组件ID不能为空"),
+
+
+
 
 
   ;

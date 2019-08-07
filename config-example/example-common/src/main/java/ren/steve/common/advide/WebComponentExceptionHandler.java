@@ -4,6 +4,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import ren.steve.common.enums.AccountExceptionEnum;
+import ren.steve.common.enums.WebComponentExceptionEnum;
 import ren.steve.common.exception.ExampleException;
 import ren.steve.common.vo.ExceptionResult;
 
@@ -15,12 +16,12 @@ import ren.steve.common.vo.ExceptionResult;
  */
 
 @ControllerAdvice
-public class AccountExceptionHandler {
+public class WebComponentExceptionHandler {
 
   @ExceptionHandler(ExampleException.class)
   public ResponseEntity<ExceptionResult> handlerException ( ExampleException ee ) {
-    AccountExceptionEnum aee = ee.getAccountExceptionEnum();
-    return ResponseEntity.status(aee.getCode()).body((new ExceptionResult(aee)));
+    WebComponentExceptionEnum wcee = ee.getWebComponentExceptionEnum();
+    return ResponseEntity.status(wcee.getCode()).body((new ExceptionResult(wcee)));
   }
 
 }

@@ -16,6 +16,11 @@ import lombok.NoArgsConstructor;
 public enum AccountExceptionEnum {
 
   ACCOUNT_NOT_FOUND(404, "账户没有找到"),
+  ACCOUNT_ID_NOT_FOUND(404, "账户ID不能为空"),
+
+
+
+
 
   ;
   private Integer code;

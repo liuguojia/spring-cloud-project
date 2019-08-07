@@ -3,7 +3,7 @@ package ren.steve.common.advide;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import ren.steve.common.enums.AccountExceptionEnum;
+import ren.steve.common.enums.AuthorityExceptionEnum;
 import ren.steve.common.exception.ExampleException;
 import ren.steve.common.vo.ExceptionResult;
 
@@ -15,11 +15,11 @@ import ren.steve.common.vo.ExceptionResult;
  */
 
 @ControllerAdvice
-public class AccountExceptionHandler {
+public class AuthorityExceptionHandler {
 
   @ExceptionHandler(ExampleException.class)
   public ResponseEntity<ExceptionResult> handlerException ( ExampleException ee ) {
-    AccountExceptionEnum aee = ee.getAccountExceptionEnum();
+    AuthorityExceptionEnum aee = ee.getAuthorityExceptionEnum();
     return ResponseEntity.status(aee.getCode()).body((new ExceptionResult(aee)));
   }
 
