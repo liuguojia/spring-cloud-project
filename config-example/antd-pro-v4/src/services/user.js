@@ -25,7 +25,7 @@ export async function queryCurrentAccount(params) {
 }
 
 export async function queryAuthorityByCurrentAccount(params) {
-  return request('/api/item-authority/authority/currentAuthority', {
+  return request('/api/item-authority/authority/current', {
     method: 'POST',
     requestType: 'form',
     data: params,

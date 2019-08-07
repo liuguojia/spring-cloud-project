@@ -15,13 +15,15 @@ import request from '@/utils/request';
 export async function login(params) {
   return request('/api/router-service/account/login', {
     method: 'POST',
+    requestType: 'form',
     data: params,
   });
 }
 
 export async function queryRemoteMenuData(params) {
-  return request('/api/router-service/router/list', {
+  return request('/api/item-authority/router/list', {
     method: 'POST',
+    requestType: 'form',
     data: params,
   });
 }
@@ -29,6 +31,7 @@ export async function queryRemoteMenuData(params) {
 export async function queryPageConfig(params) {
   return request('/api/router-service/page/component', {
     method: 'POST',
+    requestType: 'form',
     data: params,
   });
 }

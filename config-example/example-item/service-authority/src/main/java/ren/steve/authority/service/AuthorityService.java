@@ -28,7 +28,7 @@ public class AuthorityService {
     ResultVo resultVo = new ResultVo();
 
     Authority result = authorityMapper.selectByPrimaryKey(authorityQuery.getId());
-    System.out.println("authority : " + result.getCode());
+    System.out.println("authority : " + result);
 
     resultVo.setTimestamp(System.currentTimeMillis());
     resultVo.setData(result);
@@ -40,26 +40,26 @@ public class AuthorityService {
 
   public ResultVo insertAuthority ( AuthorityParams authorityParams ) {
     ResultVo resultVo = new ResultVo();
-    Authority authority = new Authority();
-    String[] codeArray = authorityParams.getCode().split(",");
-    List<String> codeList = new ArrayList<String>();
-
-    for ( String s : codeArray ) {
-      codeList.add(s);
-    }
-
-    authority.setTitle(authorityParams.getTitle());
-    authority.setLevel(authorityParams.getLevel());
-    authority.setCode(codeList);
-
-    System.out.println("authorityParams : " + authorityParams);
-    System.out.println("authority : " + authority);
-
-    int result = authorityMapper.insert(authority);
-
-    resultVo.setTimestamp(System.currentTimeMillis());
-    resultVo.setStatus(0);
-    resultVo.setMessage("Insert Authority Success.");
+    // Authority authority = new Authority();
+    // String[] codeArray = authorityParams.getCode().split(",");
+    // List<String> codeList = new ArrayList<String>();
+    //
+    // for ( String s : codeArray ) {
+    //   codeList.add(s);
+    // }
+    //
+    // authority.setTitle(authorityParams.getTitle());
+    // authority.setLevel(authorityParams.getLevel());
+    // authority.setCode(codeList);
+    //
+    // System.out.println("authorityParams : " + authorityParams);
+    // System.out.println("authority : " + authority);
+    //
+    // int result = authorityMapper.insert(authority);
+    //
+    // resultVo.setTimestamp(System.currentTimeMillis());
+    // resultVo.setStatus(0);
+    // resultVo.setMessage("Insert Authority Success.");
     return resultVo;
   }
 }

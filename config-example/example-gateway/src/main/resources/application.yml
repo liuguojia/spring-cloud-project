@@ -21,9 +21,9 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 5000 # 熔断超时时长 5000ms
+            timeoutInMilliseconds: 10000 # 熔断超时时长 5000ms
 ribbon:
-  ReadTimeout: 3500 # ribbon 读取超时时长
-  ConnectTimeout: 1000 # ribbon链接超时时长
+  ReadTimeout: 5000 # ribbon 读取超时时长
+  ConnectTimeout: 3000 # ribbon链接超时时长
   MaxAutoRetries: 0 # 当前服务重试次数
   MaxAutoRetriesNextServer: 0 # 切换服务重启次数

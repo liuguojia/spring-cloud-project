@@ -31,7 +31,7 @@ public class Account implements Serializable {
   private String name;
   private String password;
   private String nickname;
-  private Long authority;
+  private Integer authority;
   private String phone;
   private String email;
   private String province;

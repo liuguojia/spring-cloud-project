@@ -9,27 +9,35 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.List;
-
 /**
  * @Author : 刘国家
- * @Date : 2019-08-05 18:31
+ * @Date : 2019-08-07 18:37
  * @Description :
  * @ModifiedBy :
  */
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "t_authority")
-public class Authority implements Serializable {
+@Table(name = "t_router")
+public class Router implements Serializable {
 
   private static final long serialVersionUID = 5231134212346077681L;
 
   @Id
   @KeySql(useGeneratedKeys = true)
   private Integer id;
-  private String title;
-  private String code;
-  private Integer level;
+  private Boolean exact;
+  private String path;
+  private Boolean hideInMenu;
+  private Integer page;
+  private Integer routes;
+  private Integer children;
+  private String redirect;
+  private String name;
+  private String locale;
+  private String icon;
+  private String authority;
 
 
 }
