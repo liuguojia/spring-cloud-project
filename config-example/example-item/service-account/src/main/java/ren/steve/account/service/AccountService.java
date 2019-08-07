@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ren.steve.account.mapper.AccountMapper;
 import ren.steve.account.pojo.Account;
-import ren.steve.account.pojo.AccountQuery;
+import ren.steve.account.query.AccountQuery;
 import ren.steve.common.vo.ResultVo;
 import tk.mybatis.mapper.entity.Example;
 

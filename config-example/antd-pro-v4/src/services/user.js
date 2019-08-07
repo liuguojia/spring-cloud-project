@@ -9,22 +9,25 @@ import request from '@/utils/request';
  */
 
 export async function queryAccountList(params) {
-  return request('/api/router-service/account/list', {
+  return request('/api/item-account/account/list', {
     method: 'POST',
+    requestType: 'form',
     data: params,
   });
 }
 
 export async function queryCurrentAccount(params) {
-  return request('/api/router-service/account/current', {
+  return request('/api/item-account/account/current', {
     method: 'POST',
+    requestType: 'form',
     data: params,
   });
 }
 
 export async function queryAuthorityByCurrentAccount(params) {
-  return request('/api/router-service/authority/currentAuthority', {
+  return request('/api/item-authority/authority/currentAuthority', {
     method: 'POST',
+    requestType: 'form',
     data: params,
   });
 }

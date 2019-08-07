@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ren.steve.account.pojo.Account;
-import ren.steve.account.pojo.AccountQuery;
+import ren.steve.account.query.AccountQuery;
 import ren.steve.account.service.AccountService;
+import ren.steve.common.enums.AccountExceptionEnum;
 import ren.steve.common.enums.CommonExceptionEnum;
 import ren.steve.common.exception.ExampleException;
 import ren.steve.common.vo.ResultVo;
@@ -33,12 +33,13 @@ public class AccountController {
   }
 
   @PostMapping("current")
-  public ResponseEntity<ResultVo> queryAccountById ( @ModelAttribute Account account ) {
-    System.out.println("account : " + account);
-    if ( account.getId() == null ) {
-      throw new ExampleException(CommonExceptionEnum.ACCOUNT_ID_NOT_FOUND);
+  public ResponseEntity<ResultVo> queryAccountById ( @ModelAttribute AccountQuery accountQuery ) {
+    System.out.println("account : " + accountQuery);
+    if ( accountQuery.getId() == null ) {
+      ExampleException exampleException = new ExampleException(AccountExceptionEnum.ACCOUNT_NOT_FOUND);
+      throw exampleException;
     }
-    return ResponseEntity.ok(accountService.queryAccountById(account.getId()));
+    return ResponseEntity.ok(accountService.queryAccountById(accountQuery.getId()));
   }
 
 }

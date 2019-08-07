@@ -1,7 +1,9 @@
 package ren.steve.common.vo;
 
 import lombok.Data;
+import ren.steve.common.enums.AccountExceptionEnum;
 import ren.steve.common.enums.CommonExceptionEnum;
+import ren.steve.common.enums.RouterExceptionEnum;
 
 /**
  * @Author : 刘国家
@@ -16,9 +18,21 @@ public class ExceptionResult {
   private String message;
   private Long timestamp;
 
-  public ExceptionResult ( CommonExceptionEnum cem ) {
-    this.status = cem.getCode();
-    this.message = cem.getMessage();
+  public ExceptionResult ( CommonExceptionEnum cee ) {
+    this.status = cee.getCode();
+    this.message = cee.getMessage();
+    this.timestamp = System.currentTimeMillis();
+  }
+
+  public ExceptionResult ( AccountExceptionEnum aee ) {
+    this.status = aee.getCode();
+    this.message = aee.getMessage();
+    this.timestamp = System.currentTimeMillis();
+  }
+
+  public ExceptionResult ( RouterExceptionEnum ree ) {
+    this.status = ree.getCode();
+    this.message = ree.getMessage();
     this.timestamp = System.currentTimeMillis();
   }
 

@@ -1,21 +1,21 @@
 package ren.steve.common.enums;
 
-import lombok.Getter;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 /**
  * @Author : 刘国家
- * @Date : 2019-07-21 15:16
- * @Description : Account 异常字典
+ * @Date : 2019-08-07 12:14
+ * @Description :
  * @ModifiedBy :
  */
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public enum AccountEnum {
+public enum  RouterExceptionEnum {
 
-  ACCOUNT_NOT_FOUND(404, "账户没有找到"),
+  ROUTER_NOT_FOUND(404, "路由访问错误"),
 
   ;
   private Integer code;
